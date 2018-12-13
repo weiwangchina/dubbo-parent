@@ -28,6 +28,7 @@ public class DubboConsumerTest {
         System.out.println(sayHello);
 
         subsidyService.endDateCalculate(10);
+        System.out.println("......................");
 
     }
 
