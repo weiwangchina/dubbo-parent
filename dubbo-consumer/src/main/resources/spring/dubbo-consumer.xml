@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+      http://code.alibabatech.com/schema/dubbo
+      http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="dubbo-consumer"></dubbo:application>
+
+
+    <dubbo:registry address="zookeeper://192.168.4.182:2181?backup=192.168.4.183:2181,192.168.4.184:2181" />
+
+    <dubbo:reference interface="com.kakacl.service.HelloService" id="helloService"></dubbo:reference>
+    <dubbo:reference interface="com.kakacl.service.SubsidyService" id="subsidyService"></dubbo:reference>
+</beans>
