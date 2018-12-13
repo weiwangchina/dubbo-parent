@@ -10,11 +10,12 @@ import com.kakacl.service.SubsidyService;
  */
 public class SubsidyServiceImpl implements SubsidyService {
 
+
     /**
      * 计算结束的时间
+     *
      * @param extCount 每次计算的条数
      */
-    @Override
     public void endDateCalculate(Integer extCount) {
         System.out.println("计算时间开始 。。。");
         try {
